@@ -1,0 +1,28 @@
+.card {
+    margin: 8px 15px;
+    background-color: white;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 18px 20px;
+
+}
+
+.image {
+    max-width: 250px;
+    margin: 0 auto;
+    border-radius: 6px;
+    width: 100%;
+    /* object-fit: cover; */
+}
+
+/* .card_content {
+    padding: 18px 20px;
+
+} */
+
+.price {
+    /* display: inline-block; */
+}
