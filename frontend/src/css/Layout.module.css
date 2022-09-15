@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     background-color: rgb(240, 243, 255);
-    border-bottom: 1px solid rgb(208, 214, 224);
+    border-bottom: 1px solid #d0d6e0;
     max-height: 8vh;
     position: fixed;
     width: 100%;
