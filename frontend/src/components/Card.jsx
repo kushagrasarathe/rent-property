@@ -5,11 +5,18 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Card( { property: { coverPhoto, price, rentFrequency, rooms, title, baths, area, externalID  } } ) {
+ 
   return (
     <Link href={`/property/${externalID}`} passHref>
     <div className={styles.card}>
       <div className={styles.image}>
-        <Image className={styles.image} src={image} />
+        <Image 
+         className={styles.image} 
+         src={ coverPhoto ? coverPhoto.url : image}
+         alt="Property image"
+         width={'300px'}         
+         height={'220px'}         
+         />
       </div>
       <div className={styles.card_content}> 
         <span>₹ {price}</span>
@@ -23,7 +30,7 @@ export default function Card( { property: { coverPhoto, price, rentFrequency, ro
           <img src="https://img.icons8.com/windows/20/8d5cff/hydrotherapy.png" />
           <span>{baths} Bathrooms</span>
           <img src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/18/8d5cff/external-Size-arrows-tanah-basah-basic-outline-tanah-basah.png" />
-          <span>{area}m<sup>2</sup>
+          <span>{Math.round(area)} m<sup>2</sup>
           </span>
         </div>
       </div>
