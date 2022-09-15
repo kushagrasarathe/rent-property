@@ -1,72 +1,89 @@
 .card {
-    margin: 8px 15px;
-    background-color: white;
-    border-radius: 6px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 18px 20px;
+  margin: 20px;
+  background-color: white;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 18px 20px;
+  max-width: 350px;
+  height: 500px;
+}
 
+.card_content {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; */
+  padding-top: 18px;
 }
 
 .image {
-    max-width: 250px;
-    margin: 0 auto;
-    border-radius: 6px;
-    width: 100%;
-    /* object-fit: cover; */
+  max-width: 300px;
+  margin: 0 auto;
+  border-radius: 6px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 100%;
+  /* object-fit: cover; */
 }
 
-/* .card_content {
-    padding: 18px 20px;
+.features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-} */
+.features * {
+  margin: 3px;
+}
 
 .price {
-    /* display: inline-block; */
+  /* display: inline-block; */
 }
 
 .filter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: white;
-    padding: 1rem 2rem;
-    margin: 15px 0;
-    border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: white;
+  padding: 1rem 2rem;
+  margin: 15px 0;
+  border-radius: 8px;
 }
 
 .vr {
-    margin: 0 15px;
-    border-right: 2px solid #d0d6e0;
-    height: 45px;
+  margin: 0 25px;
+  border-right: 2px solid #d0d6e0;
+  height: 60px;
 }
 
 .section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .section * {
-    margin: 4px;
+  margin: 4px;
 }
 
 .section input {
-    border: 0;
-    border-bottom: 2px solid #d0d6e0;
-    padding: .4rem;
-    font-size: 16px;
+  border: 0;
+  border-bottom: 2px solid #d0d6e0;
+  padding: 0.4rem;
+  font-size: 16px;
 }
 
 .section select {
-    border: 0;
-    background-color: white;
-    font-size: 16px;
-    cursor: pointer;
+  border: 0;
+  background-color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-bottom: 2px solid #d0d6e0;
+  padding: 0.4rem;
 }
-

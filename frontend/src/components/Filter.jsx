@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../css/Component.module.css";
-import css from "../../styles/Global.module.css"
+import css from "../../styles/Global.module.css";
 
 export default function Filter() {
+  const [type, setType] = useState("");
+
   return (
     <div className={styles.filter}>
       <div className={styles.section}>
@@ -22,11 +24,11 @@ export default function Filter() {
       <span className={styles.vr}></span>
       <div className={styles.section}>
         <span>Property Type</span>
-        <select>
-            <option value="">Houses</option>
-            <option value="">Villas</option>
-            <option value="">Apartments</option>
-            <option value="">Hostels</option>
+        <select defaultValue="house" onChange={(e) => setType(e.target.value)}>
+          <option value="house">Houses</option>
+          <option value="villa">Villas</option>
+          <option value="apartment">Apartments</option>
+          <option value="hostel">Hostels</option>
         </select>
       </div>
       <span className={styles.vr}></span>

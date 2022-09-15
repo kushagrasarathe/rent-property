@@ -4,22 +4,39 @@ import Card from "../src/components/Card";
 import Filter from "../src/components/Filter";
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
+import { baseURL, fetchData } from "../src/utils/fetchAPI";
+
+export default function Home({ propertiesForRent }) {
+  // console.log(propertiesForRent)
   return (
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
-        <meta name="description" content="Rent a prooperty app built with Nextjs" />
+        <meta
+          name="description"
+          content="Rent a prooperty app built with Nextjs"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <Filter/>
+        <Filter />
         <div className={styles.listing}>
-          <Card />
-          <Card />
+          {propertiesForRent.map( (property) => <Card key={property.id} property={property} /> )}
         </div>
       </main>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const propertyForRent = await fetchData(
+    `${baseURL}properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=10`
+  );
+
+  return {
+    props: {
+      propertiesForRent: propertyForRent?.hits,
+    },
+  };
 }
