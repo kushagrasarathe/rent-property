@@ -11,8 +11,8 @@ import SearchFilters from "../src/components/SearchFilters";
 
 export default function Home({ propertiesForRent }) {
   const [name, setName] = useState("");
-  const [size, setSize] = useState();
-  const [amount, setAmount] = useState();
+  const [size, setSize] = useState("");
+  const [amount, setAmount] = useState("");
   // console.log(propertiesForRent)
   // console.log(name);
   return (
@@ -68,23 +68,49 @@ export default function Home({ propertiesForRent }) {
                 id=""
               />
             </div>
-            <span className={styles2.vr}></span>
+            {/* <span className={styles2.vr}></span>
             <div className={styles2.section}>
               <button className={css.btn_primary}>Search</button>
-            </div>
+            </div> */}
           </div>
 
-          {propertiesForRent &&
-            propertiesForRent.map((property) =>
-              // console.log(property.title.toLowerCase())
-              property.title.toLowerCase().includes(name) ? (
-                <div className={styles.listing}>
+          <div className={styles.listing}>
+            {propertiesForRent &&
+              propertiesForRent.map((property) =>
+                property.title.toLowerCase().includes(name) ? (
                   <Card key={property.id} property={property} />
-                </div>
-              ) : (
-                ''
-              )
-            )}
+                ) : (
+                  ""
+                )
+              )}
+          </div>
+          {/*           
+          <div className={styles.listing}>
+            {propertiesForRent &&
+              propertiesForRent.map(
+                (property) => (
+                  Math.round(property.area) >= size ? (
+                    <Card key={property.id} property={property} />
+                  ) : (
+                    ""
+                  )
+                )
+              )}
+          </div>
+          
+          
+          <div className={styles.listing}>
+            {propertiesForRent &&
+              propertiesForRent.map(
+                (property) => (
+                  property.price <= amount ? (
+                    <Card key={property.id} property={property} />
+                  ) : (
+                    ""
+                  )
+                )
+              )}
+          </div> */}
 
           {/* { propertiesForRent.price <= price ? (
              <div className={styles.listing}>

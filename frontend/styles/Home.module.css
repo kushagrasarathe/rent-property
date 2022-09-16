@@ -19,16 +19,3 @@
   flex-wrap: wrap;
   padding: 1rem 4rem;
 }
-
-/* @media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
-  }
-} */
