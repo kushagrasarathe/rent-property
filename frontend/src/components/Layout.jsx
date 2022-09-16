@@ -20,7 +20,7 @@ export default function Layout({ children }) {
       </nav>
       {children}
       <footer className={styles.footer}>
-        <span>Built by <a target="_blank" rel="noreffer" href="https://twitter.com/kushagrasarathe">Kushagra Sarathe</a></span>
+        <span>Built by <a target="_blank" rel="noreferrer" href="https://twitter.com/kushagrasarathe">Kushagra Sarathe</a></span>
       </footer>
     </>
   );
