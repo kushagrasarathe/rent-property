@@ -6,7 +6,7 @@
     background-color: #8d5cff;
     color: white;
     border-radius: 8px;
-    border: 2px solid whitesmoke;
+    border: 2px solid white;
 }
 
 .btn_secondary {
@@ -16,5 +16,18 @@
     background-color: white;
     color: #8d5cff;
     border-radius: 8px;
-    border: 1px solid #d1cdd9;
+    border: 2px solid #d1cdd9;
+}
+
+.btn_primary:hover {
+    background-color: #8d5cffd1;
+    color: black;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.btn_secondary:hover {
+    border: 2px solid #8d5cff;
+    color: black;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
 }

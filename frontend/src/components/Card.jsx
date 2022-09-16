@@ -19,9 +19,9 @@ export default function Card( { property: { coverPhoto, price, rentFrequency, ro
          />
       </div>
       <div className={styles.card_content}> 
-        <span>₹ {price}</span>
-        <small> /{rentFrequency}</small>
-        <h3>{title}</h3>
+        <span>AED {price}</span>
+        <small> {`/${rentFrequency}`} </small>
+        <h3>{title.length > 26 ? `${title.substring(0, 26)}...` : title}</h3>
         <span>2699 Green Valley, Highland Lake, FL</span>
         <hr />
         <div className={styles.features}>
